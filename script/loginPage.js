@@ -11,7 +11,7 @@ loginForm.addEventListener("submit", async function (event) {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     
-    let res = await fetch("https://budgetbuddy-backend.onrender.com/users/login", {
+    let res = await fetch("https://budgetbuddy-pdpp.onrender.com/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,13 +32,12 @@ localStorage.setItem("refresh", JSON.stringify(data.refreshToken))
 
 
 if(data.token=== undefined){
-  alert("Invalid Credentials")
+  alert("Invalid Credential")
 }else{
   // console.log("78964")
+ alert("Login Successful")
  window.location.href = "admin.html";
 }
 
   });
 
-// to merge HOMEPAGE
-// window.location.href= "hp.html"

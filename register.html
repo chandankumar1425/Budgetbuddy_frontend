@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EXPENSE</title>
 	<!-- <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script> -->
 
     <!-- BOX ICON -->
@@ -110,21 +110,21 @@
 				  <li>
 					  <i class='bx bxs-dollar-circle' ></i>
 					  <span class="text">
-						  <h3 id="total_profit">$1020</h3>
+						  <h3 id="total_profit">$0</h3>
 						  <p>Total Profit</p>
 					  </span>
 				  </li>
 				  <li>
 					  <i class='bx bxs-dollar-circle' ></i>
 					  <span class="text">
-						  <h3 id="total_income">$2834</h3>
+						  <h3 id="total_income">$0</h3>
 						  <p>Total Income</p>
 					  </span>
 				  </li>
 				  <li>
 					  <i class='bx bxs-dollar-circle' ></i>
 					  <span class="text">
-						  <h3 id="total_expense">$2543</h3>
+						  <h3 id="total_expense">$0</h3>
 						  <p>Total Expense</p>
 					  </span>
 				  </li>
@@ -263,7 +263,7 @@ e.preventDefault();
 //sending the data
 
 
-const res =  await fetch("https://budgetbuddy-backend.onrender.com/budget/adddata", {
+const res =  await fetch("https://budgetbuddy-pdpp.onrender.com/budget/adddata", {
     method: "POST",
     headers: {
 	      "Content-Type": "application/json",
@@ -297,7 +297,7 @@ let datacontainer = document.getElementById("recent_activity")
 //appending form data
 
 window.onload = async()=>{
-	let res = await fetch("https://budgetbuddy-backend.onrender.com/budget/allexpense" ,{
+	let res = await fetch("https://budgetbuddy-pdpp.onrender.com/budget/allexpense" ,{
 		headers :  {
 			"authorization" : `Bearer ${JSON.parse(localStorage.getItem("token"))}`
 		}
@@ -309,7 +309,7 @@ console.log(formData);
 appendData(formData)
 
 
-let res2 = await fetch("https://budgetbuddy-backend.onrender.com/budget/totalincome" ,{
+let res2 = await fetch("https://budgetbuddy-pdpp.onrender.com/budget/totalincome" ,{
 		headers :  {
 			"authorization" : `Bearer ${JSON.parse(localStorage.getItem("token"))}`
 		}
@@ -322,7 +322,7 @@ AllIncome.innerText = "₹ "  + totalIncome.TotalIncome
 
 
 
-let res3 = await fetch("https://budgetbuddy-backend.onrender.com/budget/totalexpense" ,{
+let res3 = await fetch("https://budgetbuddy-pdpp.onrender.com/budget/totalexpense" ,{
 		headers :  {
 			"authorization" : `Bearer ${JSON.parse(localStorage.getItem("token"))}`
 		}
@@ -336,7 +336,7 @@ AllExpense.innerText = "₹ "  + totalExpense.TotalExpense
 
 
 
-let res4 = await fetch("https://budgetbuddy-backend.onrender.com/budget/totalprofit" ,{
+let res4 = await fetch("https://budgetbuddy-pdpp.onrender.com/budget/totalprofit" ,{
 		headers :  {
 			"authorization" : `Bearer ${JSON.parse(localStorage.getItem("token"))}`
 		}
@@ -388,7 +388,7 @@ console.log(deleteBTN)
 // }
 const deleteRestaurant = (id) => {
 console.log(id)
-// fetch(`https://budgetbuddy-backend.onrender.com/budget/totalexpense/${id}`,{
+// fetch(`https://budgetbuddy-pdpp.onrender.com/budget/totalexpense/${id}`,{
 // 	method : "DELETE",
 // 	headers : {
 // 		"Content-Type" : "application/json"

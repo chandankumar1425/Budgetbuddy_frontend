@@ -12,7 +12,7 @@ form.addEventListener("submit", async function (event) {
     password: form.input5.value,
   };
 
-  await fetch("https://budgetbuddy-backend.onrender.com/users/signup", {
+  await fetch("https://budgetbuddy-pdpp.onrender.com/users/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -26,6 +26,7 @@ form.addEventListener("submit", async function (event) {
     }),
   });
   console.log(dataObj);
+ alert("Your Account Created")
   window.location.href = "loginPage.html";
   // localStorage.setItem("userData", JSON.stringify(dataArr));
 });

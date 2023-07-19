@@ -86,9 +86,9 @@
     margin-top: 10px;
 }
 #divForm{
-     
-     box-shadow: rgba(106, 213, 141, 0.4) -5px 5px, rgba(106, 213, 141, 0.4) -10px 10px, rgba(116, 198, 143, 0.4) -15px 15px, rgba(91, 167, 116, 0.4) -20px 20px, rgba(86, 183, 118, 0.4) -25px 25px;
-    padding: 0 30px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px; 
+    padding: 30px;
+    border-radius: 10px;
     
 
 }
